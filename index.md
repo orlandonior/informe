@@ -1,4 +1,4 @@
-# Practica 1 DSI
+# Práctica 1 DSI
 
 ## Índice
 1. Introducción
@@ -198,6 +198,24 @@ PS1='\[\033]0;\u@\h:\w\007\]\[\033[0;34m\][\[\033[0;31m\]\w\[\033[0;32m\]($(git 
 usuario@iaas-dsi:~$ exec bash -l
 [~()]$
 ```
+
+Después de editar el prompt tendremos que añadir la clave pública de la máquina virtual en la configuración de las claves de nuestra cuenta de GitHub para que se haga más fácil trabajar con repositorios remotos. Pimero copiaremos la clave con el siguiente comando:
+
+```
+[~()]$cat ~/.ssh/id_rsa.pub
+```
+
+Seguiremos esta serie de pasos para añadir la clave a nuestra cuenta de GitHub:
+ 
+1. Luego de copiar la clave, pulsaremos en la foto de l esquina superior de nuetra cuenta de GitHub y nos dirigiremos a Configuración.
+
+2. En la sección de "Acceso" de la barra lateral, haz clic en  Llaves SSH y GPG.
+
+3. Daremos click en New SSH.
+
+4. Pondremos un título que describa la key y pegaremos la key abajo.
+
+5. Pulsaremos en Add SSH Key y confirmaremos introduciendo la contraseña.
 
 Si se ha hecho lo anterior correctamente podremos clonar el repositorio tal como se ve en el siguiente comando:
 
